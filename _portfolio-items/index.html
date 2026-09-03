@@ -9,15 +9,18 @@ title: Portfolio
   {% comment %}
   {% Check how many portfolio items to set grid format %}
   {% endcomment %}
-  {% if forloop.length | modulo: 4  ==  '0' %}
+  {% assign mod4 = forloop.length | modulo: 4 %}
+  {% assign mod3 = forloop.length | modulo: 3 %}
+  {% assign mod2 = forloop.length | modulo: 2 %}
+  {% if mod4  ==  '0' %}
   <li class="one-half col">
-  {% elsif forloop.length | modulo: 3  ==  '0' %}
+  {% elsif mod3  ==  '0' %}
   <li class="one-third col">
-  {% elsif forloop.length | modulo: 2  ==  '0' %}
+  {% elsif mod2  ==  '0' %}
   <li class="one-quarter col">
   {% endif %}
     <figure class="portfolio-index-item">
-      <a href="{{ item.url }}"><img src="{% for image in item.portfolio-images reversed | limit: 1 %}{{ image.img-path }}{% endfor %}" alt="{{ forloop.rindex | prepend: ' image '| prepend: page.title }}"></a>
+      <a href="{{ item.url }}"><img src="{% for image in item.portfolio-images reversed limit: 1 %}{{ image.img-path }}{% endfor %}" alt="{{ forloop.rindex | prepend: ' image '| prepend: page.title }}"></a>
       <a href="{{ item.url }}"><figcaption>{{ item.title }}</figcaption></a>
       {% include social-shares.html %}
     </figure>

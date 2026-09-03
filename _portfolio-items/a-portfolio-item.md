@@ -3,10 +3,10 @@ layout: portfolio-item
 title: A Portfolio Item
 featured-image: /img/portfolio-items/portfolio-item-featured.jpg
 portfolio-images:
-- img-path: http:/placehold.it/900/600
-- img-path: http:/placehold.it/900/600
-- img-path: http:/placehold.it/900/600
-- img-path: http:/placehold.it/900/600
+- img-path: https://placehold.co/900/600
+- img-path: https://placehold.co/900/600
+- img-path: https://placehold.co/900/600
+- img-path: https://placehold.co/900/600
 button-text:
 button-url:
 ---

@@ -3,10 +3,10 @@ layout: portfolio-item
 title: JekyllMe
 featured-image: /img/portfolio-items/jekyllme-featured.jpg
 portfolio-images:
-- img-path: http:/placehold.it/900/600
-- img-path: http:/placehold.it/900/600
-- img-path: http:/placehold.it/900/600
-- img-path: http:/placehold.it/900/600
+- img-path: https://placehold.co/900/600
+- img-path: https://placehold.co/900/600
+- img-path: https://placehold.co/900/600
+- img-path: https://placehold.co/900/600
 button-text: See The Source
 button-url: "https://github.com/damianeoloan/jekyllme"
 ---

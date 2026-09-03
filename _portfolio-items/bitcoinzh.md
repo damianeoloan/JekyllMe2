@@ -3,10 +3,10 @@ layout: portfolio-item
 title: BitcoinZH
 featured-image: /img/portfolio-items/bitcoinzh-featured.jpg
 portfolio-images:
-  - img-path: http:/placehold.it/900/600
-  - img-path: http:/placehold.it/400/400
-  - img-path: http:/placehold.it/800/600
-  - img-path: http:/placehold.it/900/500
+  - img-path: https://placehold.co/900/600
+  - img-path: https://placehold.co/400/400
+  - img-path: https://placehold.co/800/600
+  - img-path: https://placehold.co/900/500
 button-text: See The Source
 button-url: "https://github.com/bitcoinzh"
 ---
