@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body{% if page.url contains 'blog' %} class="white-page"{% endif %}>
+  <body{% if page.url contains 'blog' or page.url contains 'archives' or page.url contains 'galleries' %} class="white-page"{% endif %}>
 
     {% include header.html %}
 
