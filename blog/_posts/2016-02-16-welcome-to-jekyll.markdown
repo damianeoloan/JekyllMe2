@@ -7,10 +7,6 @@ date:   2016-02-16
 ---
 JekyllMe is a free Jekyll theme for personal websites.
 
-Your website includes a CV / resume, portfolio slideshow, blog and contact form, wrapped in a single page.
+Your website includes a blog, wrapped in a single page.
 
-{% for experience in site.resume-items.experiences %}
-  {{ forloop.index }}
-{% endfor %}
-
-[How to set up your website](/setup)
+todo: write a setup guide.

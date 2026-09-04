@@ -1,6 +1,6 @@
-- name: portfolio
-  url: /portfolio
+- name: galleries
+  url: /galleries
 - name: blog
   url: /blog/index
-- name: resume
-  url: /cv
+- name: archives
+  url: /archives

@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
+<!-- todo: add support for portrait OR landscape gallery types. -->
 <article class="gallery-page">
+<div class="post-content" itemprop="articleBody">
   <header>
     <h1 class="post-title no-margin">{{ page.title }}</h1>
     <p class="gallery-meta">{{ page.location }}{% if page.time-period %} &middot; {{ page.time-period.start }} - {{ page.time-period.end }}{% endif %}</p>
@@ -41,5 +43,6 @@ layout: default
   {% endif %}
 
   {{ content }}
+</div>
 </article>
 {% include collection-nav.html collection=site.galleries label="Gallery" %}

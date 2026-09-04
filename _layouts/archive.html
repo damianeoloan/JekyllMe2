@@ -2,6 +2,7 @@
 layout: default
 ---
 <article class="archive-page">
+<div class="post-content" itemprop="articleBody">
   <header>
     <h1 class="post-title no-margin">{{ page.title }}</h1>
     <p class="archive-meta">{{ page.source }}{% if page.time-period %} &middot; {{ page.time-period.start }} - {{ page.time-period.end }}{% endif %}</p>
@@ -17,5 +18,6 @@ layout: default
     {% endfor %}
   </section>
   {% endif %}
+</div>
 </article>
 {% include collection-nav.html collection=site.archives label="Archive" %}

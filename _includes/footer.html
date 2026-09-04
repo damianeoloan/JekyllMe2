@@ -10,15 +10,5 @@
       {% endfor %}
     </nav>
 
-    <ul class="profile-list">
-      {% for profile in site.data.social-profiles %}
-        <li>
-          <a href="{% if profile.name == 'twitter' %}https://twitter.com/{{ profile.value }}{% elsif profile.name == 'github' %}https://github.com/{{ profile.value }}{% elsif profile.name == 'linkedin' %}{{ profile.value }}{% elsif profile.name == 'email' %}mailto:{{ profile.value }}{% endif %}">
-            {{ profile.icon }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-
     <p class="copyright">{{ site.time | date: '%Y' | prepend: '&copy; ' }}</p>
 </footer>
