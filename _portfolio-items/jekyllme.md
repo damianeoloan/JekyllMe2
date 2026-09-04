@@ -1,7 +1,9 @@
 ---
 layout: portfolio-item
+# Required: used unconditionally as the page <h1> and index figcaption; empty or missing renders a blank heading.
 title: JekyllMe
 featured-image: /img/portfolio-items/jekyllme-featured.jpg
+# Required: each entry needs img-path. No guard - empty/missing silently renders zero slides on this page and a broken thumbnail <img> on the portfolio index.
 portfolio-images:
 - img-path: https://placehold.co/900/600
 - img-path: https://placehold.co/900/600

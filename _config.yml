@@ -25,6 +25,10 @@ email: your-email@domain.com # To receive emails from the contact form, you'll n
 markdown: kramdown
 
 # API keys
+# TODO: exists solely for the resume's Google Maps embed (see
+# _includes/resume-mapjs.html). Remove this whole block when the resume
+# collection is removed - don't let the live key survive as an orphaned
+# leftover the way _data/resume-items.yml currently does.
 api_keys:
   google: "AIzaSyBTrns7kOi-WxTG7d-IrwzApkn4JvlCL5c"
 
@@ -43,6 +47,19 @@ collections:
     permalink: /portfolio/:path
     title: Portfolio # This will appear on your homepage
     output: true # No pages for each portfolio item
+  galleries:
+    title: Image Galleries
+    output: true
+    # Ordering: this Jekyll version (3.10.0, via the github-pages gem) has no
+    # config-level `order`/`sort_by` support - see each document's `weight`
+    # front matter and the `| sort: "weight"` filter used wherever this
+    # collection is looped (galleries-index.html, collection-nav.html).
+  archives:
+    title: Archives
+    output: true
+    # Ordering: same as galleries above - see each document's `weight`
+    # front matter and `| sort: "weight"` in archives-index.html and
+    # collection-nav.html.
 
 resume-items:
 # Resume summary

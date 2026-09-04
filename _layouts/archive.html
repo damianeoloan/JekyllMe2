@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="archive-page">
+  <header>
+    <h1 class="post-title no-margin">{{ page.title }}</h1>
+    <p class="archive-meta">{{ page.source }}{% if page.time-period %} &middot; {{ page.time-period.start }} - {{ page.time-period.end }}{% endif %}</p>
+  </header>
+
+  {{ content }}
+
+  {% assign archive_data = site.data[page.slug][page.slug] %}
+  {% if archive_data %}
+  <section class="archive-container">
+    {% for item in archive_data %}
+    <article class="tweet">{{ item.content }}</article>
+    {% endfor %}
+  </section>
+  {% endif %}
+</article>
+{% include collection-nav.html collection=site.archives label="Archive" %}

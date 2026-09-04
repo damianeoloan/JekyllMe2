@@ -1,3 +1,8 @@
+# TODO: orphaned file, not read by anything the resume page actually renders
+# (the live resume pulls from the generic placeholder block in _config.yml
+# instead). Contains real PII (name, employer history, email, location) and
+# references a real photo at img/avatar.jpg. Delete both when the resume
+# collection is removed - don't let it survive as an unused leftover.
 - name: "Damian O'Loan"
 - title: "Translation / Front End Development"
 - location: "Belfast, UK"
