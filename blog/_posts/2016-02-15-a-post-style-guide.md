@@ -28,7 +28,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. [Donec a diam lectus.](
 - feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan.
 - Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I5AFdII-te8" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9l8IgIouCjc" title="Video Placeholder - 5 seconds" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 1. Curabitur dapibus enim sit amet elit pharetra tincidunt
 2. feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan.

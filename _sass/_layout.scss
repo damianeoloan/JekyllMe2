@@ -397,6 +397,13 @@ h1.post-title {
 /**
  * Gallery page (CSS Scroll Snap + :target, no JS)
  */
+
+p.gallery-meta {
+  margin-top: $spacing-unit;
+  font-weight: 300;
+  font-size: $small-font-size;  
+}
+
 div.gallery-container {
   position: relative;
   width: 100%;
@@ -607,6 +614,9 @@ ul.archive-index {
 
     a.archive-link {
       text-decoration: none;
+      h2 {
+        margin-bottom: $spacing-unit;
+      }
     }
 
     p.archive-meta {
@@ -630,6 +640,22 @@ ul.archive-index {
     background: $accent-color;
     a.archive-link { color: $white-color; }
     p { color: $white-color; }
+  }
+}
+
+/**
+ * Archive page items (archive.html)
+ */
+article.tweet {
+  border-top: 1px solid $grey-color;
+  border-bottom: 2px solid $grey-color-dark;
+  padding: $spacing-unit/2;
+  margin-bottom: $spacing-unit;
+  .archive-item-meta {
+    font-size: $small-font-size;
+    .id-link:hover {
+      text-decoration: none;
+    }
   }
 }
 
