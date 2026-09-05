@@ -6,9 +6,10 @@ permalink: /galleries/
 {% comment %}
   Pagination: same forward-compatible approach as pages/archives-index.html
   - see that file for the full explanation. Activate real pagination later
-  by adding `pagination: { enabled: true, collection: galleries }` to this
-  file's front matter and installing jekyll-paginate-v2 - nothing below
-  needs to change.
+  by adding `pagination: { enabled: true, collection: galleries,
+  sort_field: weight, sort_reverse: false }` to this file's front matter
+  and installing jekyll-paginate-v2 - nothing below needs to change. The
+  sort_field is required, verified the same way as archives-index.html.
 {% endcomment %}
 {% if paginator %}
   {% assign items = paginator.posts %}

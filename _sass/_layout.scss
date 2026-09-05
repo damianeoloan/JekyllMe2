@@ -414,11 +414,35 @@ div.gallery-scroller {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background: $grey-color;
+  background: $white-color;
 
   @media (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;
   }
+}
+
+// A "portrait" gallery gets a taller frame so its images aren't
+// squeezed into the default landscape ratio; "landscape" keeps the
+// default 3:2 above. "mixed" uses this same tall frame - not because
+// its images are portrait, but because the frame is one shared box for
+// every slide in the scroller (a single scroll-snap container can't
+// vary its own height per slide without JS), so it has to be tall
+// enough to fit a portrait image up front. Below, object-fit: contain
+// (instead of cover) keeps each image at its own natural ratio inside
+// that fixed frame rather than cropping it to fill - which also means
+// a shorter landscape image is letterboxed and vertically centered,
+// not stretched. Because the frame's height never changes between
+// slides, nothing below/above the gallery shifts as you scroll through
+// a mix of orientations.
+div.gallery-container.orientation-portrait div.gallery-scroller,
+div.gallery-container.orientation-mixed div.gallery-scroller {
+  aspect-ratio: 2 / 3;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+div.gallery-container.orientation-mixed div.gallery-slide img {
+  object-fit: contain;
 }
 
 div.gallery-slide {

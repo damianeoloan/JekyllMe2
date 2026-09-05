@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<!-- todo: add support for portrait OR landscape gallery types. -->
 <article class="gallery-page">
 <div class="post-content" itemprop="articleBody">
   <header>
@@ -11,7 +10,7 @@ layout: default
 
   {% if page.images %}
   <!-- Start gallery -->
-  <div class="gallery-container">
+  <div class="gallery-container orientation-{{ page.orientation | default: 'landscape' }}">
     <div class="gallery-scroller" tabindex="0" role="group" aria-label="{{ page.title }} photo gallery">
       {% assign total = page.images.size %}
       {% for img in page.images %}

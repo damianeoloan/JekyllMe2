@@ -1,4 +1,4 @@
-# Welcome to JekyllMe
+# Welcome to JekyllMe2
 #
 # This config file includes settings that affect your whole site,
 # which you set up once and will rarely need to edit after that.
@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: JekyllMe
+title: JekyllMe2
 avatar_path: "/img/avatar.svg" # The location of your homepage avatar
 description: > # this means to ignore newlines until "baseurl:"
   your free personal website

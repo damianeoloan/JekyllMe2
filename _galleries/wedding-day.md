@@ -5,6 +5,8 @@ title: Our Wedding Day
 # Required: must be a number, present on every document in this collection. Missing sorts this item to the end with no error; a non-numeric value renders a visible "Liquid error" string on the index/nav instead of failing to build.
 weight: 2
 location: Home
+# Optional: "landscape" (default), "portrait", or "mixed" - controls the slideshow frame's aspect ratio. See _layouts/gallery.html.
+orientation: landscape
 time-period:
   start: 6/14/2019
   end: 6/14/2019

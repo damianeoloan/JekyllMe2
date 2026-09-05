@@ -21,9 +21,13 @@ permalink: /archives/
   generator actually ran, so testing for its presence is enough to branch
   between "real, plugin-driven pagination" and "no plugin, list
   everything." To activate real pagination later, add
-  `pagination: { enabled: true, collection: archives }` to this file's
-  front matter and install jekyll-paginate-v2 - nothing below needs to
-  change.
+  `pagination: { enabled: true, collection: archives, sort_field: weight,
+  sort_reverse: false }` to this file's front matter and install
+  jekyll-paginate-v2 - nothing below needs to change. The sort_field is
+  required: verified by test (installed jekyll-paginate-v2 locally, then
+  reverted) that it defaults to sorting by `date`, which this collection's
+  documents don't have, silently falling back to file order instead of
+  this collection's `weight` front matter.
 {% endcomment %}
 {% if paginator %}
   {% assign items = paginator.posts %}

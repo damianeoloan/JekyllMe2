@@ -10,11 +10,29 @@ layout: default
 
   {{ content }}
 
+  {% comment %}
+    Each collection's data file mirrors that platform's real export shape
+    rather than a flat, uniform format - Twitter wraps each item under
+    "tweet" (id_str, created_at, full_text, ...), Reddit under "data" (a
+    "kind"/"data" envelope matching Reddit's own API responses, with
+    created_utc as a Unix timestamp instead of a date string). Detecting
+    the shape per item (rather than switching on page.source) means this
+    keeps working even if a future collection mixes formats within one
+    file.
+  {% endcomment %}
   {% assign archive_data = site.data[page.slug][page.slug] %}
   {% if archive_data %}
   <section class="archive-container">
     {% for item in archive_data %}
-    <article class="tweet">{{ item.content }}</article>
+    <article class="tweet">
+      {% if item.tweet %}
+        <p>{{ item.tweet.full_text }}</p>
+        <p class="archive-item-meta">{{ item.tweet.created_at | date: "%-d %b %Y" }} &middot; {{ item.tweet.favorite_count }} likes &middot; {{ item.tweet.retweet_count }} retweets</p>
+      {% elsif item.data %}
+        <p>{{ item.data.body }}</p>
+        <p class="archive-item-meta">{{ item.data.created_utc | date: "%-d %b %Y" }} &middot; r/{{ item.data.subreddit }} &middot; {{ item.data.score }} points</p>
+      {% endif %}
+    </article>
     {% endfor %}
   </section>
   {% endif %}

@@ -5,6 +5,8 @@ title: Honeymoon in Paris
 # Required: must be a number, present on every document in this collection. Missing sorts this item to the end with no error; a non-numeric value renders a visible "Liquid error" string on the index/nav instead of failing to build.
 weight: 1
 location: Paris
+# Optional: "landscape" (default), "portrait", or "mixed" - controls the slideshow frame's aspect ratio. See _layouts/gallery.html.
+orientation: mixed
 time-period:
   start: 8/20/2020
   end: 9/4/2020

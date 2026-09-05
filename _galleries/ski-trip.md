@@ -5,6 +5,8 @@ title: Ski Trip
 # Required: must be a number, present on every document in this collection. Missing sorts this item to the end with no error; a non-numeric value renders a visible "Liquid error" string on the index/nav instead of failing to build.
 weight: 3
 location: Chamonix
+# Optional: "landscape" (default), "portrait", or "mixed" - controls the slideshow frame's aspect ratio. See _layouts/gallery.html.
+orientation: portrait
 time-period:
   start: 1/10/2022
   end: 1/17/2022

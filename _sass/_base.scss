@@ -272,26 +272,24 @@ blockquote {
 /**
  * Code formatting
  */
-pre, code {
+code {
+  background: $grey-color;
+  font-size: $small-font-size;
+  padding: .15em .4em;
+  border-radius: 3px;
+}
+pre {
   line-height: 1.5;
   background: $grey-color;
   font-size: $small-font-size;
-  display: block;
-}
-
-code {
-  padding: 1rem 1.6rem;
-  overflow-x: auto;
-}
-pre {
   padding: 1rem 1.6rem;
   margin: 0 auto $spacing-unit;
   text-align: left;
+  overflow-x: auto;
   > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-    overflow-x: auto;
+    padding: 0;
+    border-radius: 0;
+    background: none;
   }
 }
 /**
