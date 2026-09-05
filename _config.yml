@@ -7,6 +7,7 @@
 
 # Site settings
 title: JekyllMe2
+search: false # Set to true to render the search box in the footer (see _includes/search.html)
 avatar_path: "/img/avatar.svg" # The location of your homepage avatar
 description: > # this means to ignore newlines until "baseurl:"
   your free personal website

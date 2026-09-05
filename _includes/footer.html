@@ -10,5 +10,9 @@
       {% endfor %}
     </nav>
 
+    {% if site.search %}
+      {% include search.html %}
+    {% endif %}
+
     <p class="copyright">{{ site.time | date: '%Y' | prepend: '&copy; ' }}</p>
 </footer>
