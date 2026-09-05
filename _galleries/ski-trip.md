@@ -11,7 +11,7 @@ time-period:
   start: 1/10/2022
   end: 1/17/2022
 # Required for the galleries index thumbnail (gallery-item.html reads images[0] unguarded). Optional for this page itself, which skips the slideshow gracefully if absent.
-images: [img1.jpg, img2.jpg, img3.jpg]
+images: [img1.svg, img2.svg, img3.svg]
 ---
 
 A week on the slopes with old friends.

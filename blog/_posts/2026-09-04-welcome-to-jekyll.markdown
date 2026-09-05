@@ -10,6 +10,28 @@ Your website includes a blog and collections for image or photo galleries and ar
 
 ## Setup guide
 
+### Desktop Environment
+
+#### Linux
+
+Install `git` and a C build toolchain via your distro's package manager (e.g. on Debian/Ubuntu, `sudo apt install git build-essential`), then install [rbenv](https://github.com/rbenv/rbenv) following its own instructions for your distro. The project is free and open-source - clone it to get started:
+
+```
+git clone https://github.com/your-username/jekyllme2
+```
+
+#### macOS
+
+Install [Homebrew](https://brew.sh/) if you don't already have it, then:
+
+```
+brew install git rbenv ruby-build
+```
+
+```
+git clone https://github.com/your-username/jekyllme2
+```
+
 ### Toolchain
 
 Install [rbenv](https://github.com/rbenv/rbenv), then run `rbenv install` to pick up the Ruby version pinned in `.ruby-version`. From the project root, run `bundle install` to install the gems listed in `Gemfile`.

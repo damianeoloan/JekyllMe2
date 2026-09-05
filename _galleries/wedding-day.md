@@ -11,7 +11,7 @@ time-period:
   start: 6/14/2019
   end: 6/14/2019
 # Required for the galleries index thumbnail (gallery-item.html reads images[0] unguarded). Optional for this page itself, which skips the slideshow gracefully if absent.
-images: [img1.jpg, img2.jpg, img3.jpg]
+images: [img1.svg, img2.svg, img3.svg]
 ---
 
 The best day of our lives, surrounded by family and friends.
