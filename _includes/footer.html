@@ -4,7 +4,7 @@
 
     <nav class="footer-nav">
       {% for link in site.data.nav-links %}
-        <a href="{{ link.url }}">
+        <a href="{{ link.url | prepend: site.baseurl }}">
           {{ link.name | downcase }}
         </a>
       {% endfor %}

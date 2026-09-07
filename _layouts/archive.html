@@ -27,10 +27,10 @@ layout: default
     <article class="tweet" id="{% if item.tweet %}{{ item.tweet.id_str }}{% elsif item.data %}{{ item.data.id }}{% endif %}">
       {% if item.tweet %}
         <p>{{ item.tweet.full_text }}</p>
-        <p class="archive-item-meta">{{ item.tweet.created_at | date: "%-d %b %Y" }} &middot; {{ item.tweet.favorite_count }} likes &middot; {{ item.tweet.retweet_count }} retweets &middot <a href="{{ item.tweet.id_str | prepend: '#' | prepend: page.url }}" class="id-link">&#x1F517;</a></p>
+        <p class="archive-item-meta">{{ item.tweet.created_at | date: "%-d %b %Y" }} &middot; {{ item.tweet.favorite_count }} likes &middot; {{ item.tweet.retweet_count }} retweets &middot <a href="{{ item.tweet.id_str | prepend: '#' | prepend: page.url | prepend: site.baseurl }}" class="id-link">&#x1F517;</a></p>
       {% elsif item.data %}
         <p>{{ item.data.body }}</p>
-        <p class="archive-item-meta">{{ item.data.created_utc | date: "%-d %b %Y" }} &middot; r/{{ item.data.subreddit }} &middot; {{ item.data.score }} points &middot; <a href="{{ item.data.id | prepend: '#' |  prepend: page.url }}" class="id-link">&#x1F517;</a></p>
+        <p class="archive-item-meta">{{ item.data.created_utc | date: "%-d %b %Y" }} &middot; r/{{ item.data.subreddit }} &middot; {{ item.data.score }} points &middot; <a href="{{ item.data.id | prepend: '#' |  prepend: page.url | prepend: site.baseurl }}" class="id-link">&#x1F517;</a></p>
       {% endif %}
     </article>
     {% endfor %}
