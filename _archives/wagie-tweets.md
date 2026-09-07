@@ -1,9 +1,7 @@
 ---
 layout: archive
-# Required: used unconditionally as the page <h1> and index-card <h2>; empty or missing renders a blank heading.
-title: Wagie Tweets
-# Required: must be a number, present on every document in this collection. Missing sorts this item to the end with no error; a non-numeric value renders a visible "Liquid error" string on the index/nav instead of failing to build.
-weight: 2
+title: Wagie Tweets  # Required, string
+weight: 2  # Required, integer
 source: Twitter
 time-period:
   start: 1/1/2019
