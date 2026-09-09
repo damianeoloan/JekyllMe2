@@ -5,7 +5,6 @@
     <text class="day" x="25" y="30" text-anchor="middle" >{{ post.date | date: "%-d" }}</text>
     <text class="month" x="25" y="45" text-anchor="middle" >{{ post.date | date: "%b" | upcase }}</text>
     <text class="year" x="25" y="45" text-anchor="middle" >{{ post.date | date: "%Y" | upcase }}</text>
-    </g>
   </svg>
 
   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
