@@ -288,9 +288,12 @@ h1.post-title {
    @include media-query($on-desktop) { width: 66.66666666%; }
    @include media-query($on-tablet) { width: 70%; }
    @include media-query($on-mobile) { width: 90%; }
-   li {
+   > li {
      position: relative;
      text-align: left;
+     /* Direct children only: as a descendant selector this reached any nested
+        list inside an item, so a post excerpt containing one would have taken
+        the full card padding. */
      padding: var(--spacing-unit);
      @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
      svg.post-meta {
@@ -555,9 +558,12 @@ ul.gallery-index {
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
-  li {
+  > li {
     position: relative;
     text-align: left;
+    /* Direct children only: as a descendant selector this reached any nested
+       list inside an item, so a post excerpt containing one would have taken
+       the full card padding. */
     padding: var(--spacing-unit);
     @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
 
@@ -609,9 +615,12 @@ ul.archive-index {
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
-  li {
+  > li {
     position: relative;
     text-align: left;
+    /* Direct children only: as a descendant selector this reached any nested
+       list inside an item, so a post excerpt containing one would have taken
+       the full card padding. */
     padding: var(--spacing-unit);
     @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
 
