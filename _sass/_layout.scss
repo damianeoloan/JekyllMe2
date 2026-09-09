@@ -802,3 +802,45 @@ div.pagination {
      margin-top: $spacing-unit/2;
    }
  }
+
+/**
+ * Timeline
+ *
+ * The space between events is the summary paragraph's own margin-bottom,
+ * part of the site-wide vertical rhythm. Rather than measure that gap and
+ * hardcode a matching height, $timeline-gap sets the paragraph's margin here
+ * and gives the connector its height from the same value, so the line always
+ * spans exactly the space it replaces.
+ */
+$timeline-gap: $spacing-unit;
+
+ol.timeline {
+  margin-left: 0;
+  list-style: none;
+}
+
+.timeline-event {
+  position: relative;
+
+  .timeline-event-summary {
+    margin-bottom: $timeline-gap;
+  }
+
+  /* The paragraph's bottom margin collapses out of the list item, so the gap
+     sits below the item's box - top: 100% starts the line exactly where the
+     empty space begins. */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 2px;
+    height: $timeline-gap;
+    background-color: $dark-grey;
+  }
+
+  /* No trailing line after the final event. */
+  &:last-child::after {
+    content: none;
+  }
+}
