@@ -5,7 +5,7 @@
   width: 100%;
   border-top: 0.25rem solid $grey-color;
   font-family: $title-font-family;
-  background: $dark-grey;
+  background: $white-color;
 }
 
 .site-title .site-name {
@@ -63,7 +63,7 @@ div.nav-container {
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(2,2,2,0.9);
+  background: $white-color;
   text-align: center;
   z-index: 100;
   label {
@@ -124,7 +124,7 @@ input#ctrl:checked + div.icon-container~div.fullscreen {
 
 nav.menu a.nav-link {
   display: block;
-  color: $grey-color;
+  color: $dark-grey;
   font-size: 5rem;
   /* Static 0.6 - nothing raises it. The rule that would have (a.page-link)
      targeted a class in no template; hover feedback comes from the colour
@@ -143,7 +143,7 @@ nav.menu a.nav-link {
  * Site footer
  */
 .site-footer {
-    background: $dark-grey;
+    background: $white-color;
     padding: calc(var(--spacing-unit) / 2) 0;
     margin: var(--spacing-unit) auto 0;
     text-align: center;
@@ -164,7 +164,7 @@ nav.footer-nav {
   margin-bottom: calc(var(--spacing-unit) / 2);
   a {
     text-decoration: none;
-    color: $grey-color;
+    color: $dark-grey;
     padding: calc(var(--spacing-unit) / 4) var(--spacing-unit);
     -webkit-transition: color 250ms ease-in;
     transition: color 250ms ease-in;
@@ -176,7 +176,7 @@ nav.footer-nav {
   }
 }
 p.copyright {
-  color: $grey-color-dark;
+  color: $dark-grey;
   font-size: $small-font-size;
 }
 
@@ -284,52 +284,34 @@ h1.post-title {
    width: 70%;
    margin: 0 auto var(--spacing-unit);
    z-index: 1;
-   background: $grey-color;
+   background: $white-color;
    @include media-query($on-desktop) { width: 66.66666666%; }
    @include media-query($on-tablet) { width: 70%; }
    @include media-query($on-mobile) { width: 90%; }
    > li {
      position: relative;
      text-align: left;
+     /* Same rule the archive's article.tweet and the style guide's table
+        use: a light hairline above, a heavier dark rule below. */
+     border-top: 1px solid $grey-color;
+     border-bottom: 2px solid $dark-grey;
+     /* Separation these lists did not need while the li:nth-of-type stripes
+        gave each item its own background colour. With every card white they
+        run flush together and the two borders meet as one 3px rule. */
+     margin-bottom: var(--spacing-unit);
      /* Direct children only: as a descendant selector this reached any nested
         list inside an item, so a post excerpt containing one would have taken
         the full card padding. */
      padding: var(--spacing-unit);
      @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
-     svg.post-meta {
-       width: 12rem;
-       height: 12rem;
+     time.post-item-date {
+       display: block;
+       text-align: right;
        margin-bottom: calc(var(--spacing-unit) / 2);
-       @include media-query($on-tablet) {
-         width: 8rem;
-         height: 8rem;
-         display: block;
-         margin: 0 auto calc(var(--spacing-unit) / 2);
-       }
-       text.month, text.year {
-         -webkit-transition: opacity 250ms ease-in;
-         transition: opacity 250ms ease-in;
-       }
-       text.day { font-size: 2.6rem; }
-       text.month { font-size: 1.2rem; }
-       text.year {
-         font-size: 1.2rem;
-         opacity: 0;
-       }
-     }
-     svg.post-meta:hover {
-       text.month {
-         opacity: 0;
-       }
-
-       text.year {
-         opacity: 1;
-       }
+       font-size: $small-font-size;
+       color: $dark-grey;
      }
 
-     a.post-link {
-       text-decoration: none;
-     }
 
      p.timer { font-size: $small-font-size; }
 
@@ -346,58 +328,8 @@ h1.post-title {
      }
    }
 
-   li:nth-of-type(3n+1) {
-     background: $grey-color;
-     svg.post-meta {
-       circle { fill: $accent-color; }
-       text {
-         font-family: $title-font-family;
-         fill: $grey-color;
-       }
-     }
 
-     h2 {
-       color: $accent-color;
-     }
 
-     a.post-link {
-       color: $dark-grey;
-     }
-   }
-
-   li:nth-of-type(3n+2) {
-     background: $dark-grey;
-     svg.post-meta {
-       circle { fill: $grey-color; }
-       text {
-         font-family: $title-font-family;
-         fill: $dark-grey;
-       }
-     }
-
-     a.post-link {
-       color: $grey-color;
-     }
-
-     h2, p {
-       color: $grey-color;
-     }
-  }
-
-  li:nth-of-type(3n+0) {
-    background: $accent-color;
-    svg.post-meta {
-      circle { fill: $white-color; }
-       text {
-         font-family: $title-font-family;
-         fill: $accent-color;
-       }
-    }
-
-    a.post-link { color: $white-color; }
-
-    p { color: $white-color; }
-  }
 }
 
 /**
@@ -481,8 +413,8 @@ div.gallery-slide-meta {
   justify-content: flex-end;
   align-items: flex-end;
   padding: calc(var(--spacing-unit) / 2);
-  background: linear-gradient(to top, rgba(2, 2, 2, 0.8), transparent);
-  color: $white-color;
+  background: $white-color;
+  color: $dark-grey;
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
@@ -503,8 +435,8 @@ a.gallery-next {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background: rgba(2, 2, 2, 0.5);
-  color: $white-color;
+  background: $white-color;
+  color: $dark-grey;
   font-size: 2.4rem;
   text-decoration: none;
   opacity: 0;
@@ -522,7 +454,7 @@ a.gallery-next:focus {
 }
 
 div.gallery-slide:target {
-  outline: 3px solid $grey-color-dark;
+  outline: 3px solid $dark-grey;
   outline-offset: -3px;
 }
 
@@ -536,13 +468,13 @@ div.gallery-dots {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: $grey-color;
+    background: $white-color;
     border: 1px solid $dark-grey;
   }
 
   a.gallery-dot:hover,
   a.gallery-dot:focus {
-    background: $accent-color;
+    background: $white-color;
   }
 }
 
@@ -554,13 +486,21 @@ ul.gallery-index {
   width: 70%;
   margin: 0 auto var(--spacing-unit);
   z-index: 1;
-  background: $grey-color;
+  background: $white-color;
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
   > li {
     position: relative;
     text-align: left;
+    /* Same rule the archive's article.tweet and the style guide's table
+       use: a light hairline above, a heavier dark rule below. */
+    border-top: 1px solid $grey-color;
+    border-bottom: 2px solid $dark-grey;
+    /* Separation these lists did not need while the li:nth-of-type stripes
+       gave each item its own background colour. With every card white they
+       run flush together and the two borders meet as one 3px rule. */
+    margin-bottom: var(--spacing-unit);
     /* Direct children only: as a descendant selector this reached any nested
        list inside an item, so a post excerpt containing one would have taken
        the full card padding. */
@@ -575,32 +515,13 @@ ul.gallery-index {
       margin-bottom: calc(var(--spacing-unit) / 2);
     }
 
-    a.gallery-link {
-      text-decoration: none;
-    }
-
     p.gallery-meta {
       font-size: $small-font-size;
     }
   }
 
-  li:nth-of-type(3n+1) {
-    background: $grey-color;
-    h2 { color: $accent-color; }
-    a.gallery-link { color: $dark-grey; }
-  }
 
-  li:nth-of-type(3n+2) {
-    background: $dark-grey;
-    a.gallery-link { color: $grey-color; }
-    h2, p { color: $grey-color; }
-  }
 
-  li:nth-of-type(3n+0) {
-    background: $accent-color;
-    a.gallery-link { color: $white-color; }
-    p { color: $white-color; }
-  }
 }
 
 /**
@@ -611,13 +532,21 @@ ul.archive-index {
   width: 70%;
   margin: 0 auto var(--spacing-unit);
   z-index: 1;
-  background: $grey-color;
+  background: $white-color;
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
   > li {
     position: relative;
     text-align: left;
+    /* Same rule the archive's article.tweet and the style guide's table
+       use: a light hairline above, a heavier dark rule below. */
+    border-top: 1px solid $grey-color;
+    border-bottom: 2px solid $dark-grey;
+    /* Separation these lists did not need while the li:nth-of-type stripes
+       gave each item its own background colour. With every card white they
+       run flush together and the two borders meet as one 3px rule. */
+    margin-bottom: var(--spacing-unit);
     /* Direct children only: as a descendant selector this reached any nested
        list inside an item, so a post excerpt containing one would have taken
        the full card padding. */
@@ -625,7 +554,6 @@ ul.archive-index {
     @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
 
     a.archive-link {
-      text-decoration: none;
       h2 {
         margin-bottom: var(--spacing-unit);
       }
@@ -636,23 +564,8 @@ ul.archive-index {
     }
   }
 
-  li:nth-of-type(3n+1) {
-    background: $grey-color;
-    h2 { color: $accent-color; }
-    a.archive-link { color: $dark-grey; }
-  }
 
-  li:nth-of-type(3n+2) {
-    background: $dark-grey;
-    a.archive-link { color: $grey-color; }
-    h2, p { color: $grey-color; }
-  }
 
-  li:nth-of-type(3n+0) {
-    background: $accent-color;
-    a.archive-link { color: $white-color; }
-    p { color: $white-color; }
-  }
 }
 
 /**
@@ -660,7 +573,7 @@ ul.archive-index {
  */
 article.tweet {
   border-top: 1px solid $grey-color;
-  border-bottom: 2px solid $grey-color-dark;
+  border-bottom: 2px solid $dark-grey;
   padding: calc(var(--spacing-unit) / 2);
   margin-bottom: var(--spacing-unit);
   .archive-item-meta {
@@ -680,7 +593,7 @@ div.pagination {
   .paginate-link {
     display: inline-block;
     padding: 1.5rem 3rem;
-    background: $grey-color;
+    background: $white-color;
     font-size: 2.6rem;
     text-decoration: none;
     line-height: 1;
@@ -724,8 +637,8 @@ div.pagination {
  section.hero {
    width: 100%;
    height: 100vh;
-   background: $dark-grey;
-   color: $white-color;
+   background: $white-color;
+   color: $dark-grey;
    margin: 0;
    position: relative;
    div.namecard {
@@ -769,8 +682,8 @@ div.pagination {
      }
      a.button {
        padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
-       border: 2px solid $white-color;
-       color: $white-color;
+       border: 2px solid $dark-grey;
+       color: $dark-grey;
        text-decoration: none;
        text-align: center;
        transition: 250ms ease-in;
@@ -818,7 +731,7 @@ ol.timeline {
     left: 0;
     width: 2px;
     height: var(--spacing-unit);
-    background-color: $dark-grey;
+    background-color: $white-color;
   }
 
   /* No trailing line after the final event. */

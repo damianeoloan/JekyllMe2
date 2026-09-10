@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $dark-grey;
-    background-color: $grey-color;
+    background-color: $white-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -105,7 +105,7 @@ table {
     &:first-of-type { border-left: none; }
     &:last-of-type { border-right: none; }
   }
-  th { border-bottom: 2px solid $grey-color-dark; }
+  th { border-bottom: 2px solid $dark-grey; }
 }
 
  /**
@@ -227,15 +227,13 @@ p, span, figcaption, ol li, ul li {
  * Links
  */
 a {
-color: $blue-color;
+color: $accent-color;
 text-decoration: none;
 
-  &:visited {
-    color: darken($blue-color, 15%);
-  }
-
+  /* No :visited variant - the site converged on one blue, and this was the
+     colour it converged on. Hover is distinguished by the underline. */
   &:hover {
-    color: $blue-color;
+    color: $accent-color;
     text-decoration: underline;
   }
 }
@@ -270,14 +268,14 @@ blockquote {
  * Code formatting
  */
 code {
-  background: $grey-color;
+  background: $white-color;
   font-size: $small-font-size;
   padding: .15em .4em;
   border-radius: 3px;
 }
 pre {
   line-height: 1.5;
-  background: $grey-color;
+  background: $white-color;
   font-size: $small-font-size;
   padding: 1rem 1.6rem;
   margin: 0 auto var(--spacing-unit);

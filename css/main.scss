@@ -14,14 +14,13 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;
 
 // Color palette
-$accent-color:       #1DA1F2;
+$accent-color:       #1756a9; // the site's single blue: 7.02:1 on $white-color (AA and AAA for
+                              //  body text), and 1.9:1 against $dark-grey so links stay distinct
 
 $white-color:      #fdfdfd;
-$blue-color:       #2a7ae2;
 $grey-color:       #e5e5e5;
 $dark-grey:        #2e2e2e;
 $dark-grey-7:     rgba(46, 46, 46, 0.7);
-$grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
 $content-width:    1440px;
