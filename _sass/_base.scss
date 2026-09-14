@@ -10,6 +10,10 @@ dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
+hr {
+  border: 2px solid $dark-grey;
+}
+
 /**
  * Basic styling
  */
@@ -250,7 +254,10 @@ blockquote {
   letter-spacing: -1px;
   margin: 0 auto var(--spacing-unit);
   @include media-query($on-tablet) { max-width: 80%; }
-  @include media-query($on-mobile) { max-width: 90%; }
+  @include media-query($on-mobile) {
+    max-width: 90%;
+    p { padding-left: var(--spacing-unit); }
+  }
   > :last-child {
     margin-bottom: 0;
   }
